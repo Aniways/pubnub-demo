@@ -504,6 +504,12 @@ hr {
 }
 
 .aniways-image {
+  height: 20px;
+  width: auto;
+  cursor: pointer;
+}
+
+.aniways-wall-image {
   height: 30px;
   width: auto;
   cursor: pointer;
