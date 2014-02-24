@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="aniways.css">
+<link rel="stylesheet" type="text/css" href="bootstrap-popover.css">
+<body>
+<div style="top: 50%; right: 50%; position: absolute;">
+Enter Chat and press enter
+<div/>
+<div contenteditable=true id=input class='aniways-div' ></div>
+<div id=box class=aniways-wall></div>
+<div id=pubnub pub-key=demo sub-key=demo></div>
+</div>
+<script src=pubnub.min.js></script>
+<script src=aniways.min.js></script>
+<script>(function(){
+var box     = PUBNUB.$('box')
+,   input   = PUBNUB.$('input')
+,   channel = 'chat';
+
+// HANDLE TEXT MESSAGE
+function chat_receive(text) {
+box.innerHTML = "<div class=aniways-message>" + (''+text).replace( /[<>]/g, '' ) +
+"</div>" + box.innerHTML;
+}
+
+// OPEN SOCKET TO RECEIVE TEXT MESSAGE
+PUBNUB.subscribe({
+channel : channel,
+message : chat_receive
+});
+
+// SEND TEXT MESSAGE
+PUBNUB.bind( 'keyup', input, function(e) {
+(e.keyCode || e.charCode) === 13 && PUBNUB.publish({
+channel : channel,
+message : Aniways.encodeText(),
+x       : (input.value='')
+});
+} );
+Aniways.init();
+})();</script>
+</body>
+

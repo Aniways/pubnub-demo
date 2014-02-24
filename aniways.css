@@ -1,0 +1,35 @@
+.aniways-div{
+  -moz-appearance: textfield-multiline;
+  -webkit-appearance: textarea;
+  border: 1px solid gray;
+  font: medium -moz-fixed;
+  font: -webkit-small-control;
+  line-height: 18px;
+  height: 38px;
+  overflow: scroll;
+  padding: 2px;
+  resize: both;
+  width: 230px;
+  color: #808080;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  background-color: white;
+}
+.aniways-highlight {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.aniways-image {
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+}
+
+.aniways-popover-image {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
