@@ -490,7 +490,7 @@ hr {
   overflow: scroll;
   padding: 2px;
   resize: both;
-  width: 230px;
+  width: 100%;
   color: #808080;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
