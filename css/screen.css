@@ -335,3 +335,14 @@ dl dd ul li { border: none; }
 .ui-mobile-viewport .localnav li {
   border: none; 
 }
+
+.ui-li-thumb {
+  position: relative;
+  float: none;
+  margin-right: 0px;
+
+}
+
+.ui-li-static.ui-li-has-thumb {
+  padding: .7em 15px;
+}
