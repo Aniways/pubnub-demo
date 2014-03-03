@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="messenger.appcache">
+<html>
   <head>
     <title>Pub Messenger</title>
 
@@ -28,12 +28,17 @@
     <!-- Home Page -->
     <div data-role="page" id="homePage" data-theme="c" class="type-home">
 
+      <img class='aniways-logo' src='img/aniways_Logo-01.png' alt='Berski like'/>
       <div data-role="content">
         <div class="logo">
-          <h3>PubNub Messenger</h3>
+          <h3>PubNub-Aniways Messenger</h3>
         </div>
         <input type="text" name="name" id="username" placeholder="Display Name" />
         <a href="#" id="startChatButton" data-role="button">Start Chatting!</a>
+        <div id='row'>
+          <span id='homePage_p'>Enjoy great messaging with Aniways</span>
+          <img id='berski_like' src='img/like_berski@2x.png' alt='Berski like'/>
+        </div>
       </div><!-- /content -->
 
     </div><!-- /page -->
@@ -43,13 +48,13 @@
       <div data-role="header">
         <h1>Current Chats</h1>
       </div>
+      <img class='aniways-logo' src='img/aniways_Logo-01.png' alt='Berski like'/>
 
       <div data-role="content">
         <input type="text" name="name" id="chatRoomName" placeholder="Chat Room Name" />
         <a href="#" id="newChatButton" data-role="button">Join New Chat</a>
 
         <br />
-
         <ul data-role="listview" data-split-icon="delete" data-split-theme="c" id="chatList">
           <!-- <li><span class="username">User123:</span>This is my message.</li> -->
         </ul>
@@ -59,6 +64,7 @@
     <!-- Chat Page -->
     <div data-role="page" id="chatPage" data-theme="c" class="type-interior">
 
+      <img class='aniways-logo' src='img/aniways_Logo-01.png' alt='Berski like'/>
       <div data-role="content">
         <div class="content-primary">
           <div data-role="header" data-position="fixed" data-tap-toggle="false">
@@ -72,16 +78,16 @@
           </div>
           <div>
             <div contenteditable=true class='aniways-div' id="messageContent"></div>
-              <div class="ui-grid-a">
-                <div class="ui-block-a"><a href="#" id="sendMessageButton" data-role="button">Send Message</a></div>
-                <div class="ui-block-b"><a href="#" id="backButton" data-rel="back" data-role="button">Chat Rooms</a></div>
-              </div>
+            <div class="ui-grid-a">
+              <div class="ui-block-a"><a href="#" id="sendMessageButton" data-role="button">Send Message</a></div>
+              <div class="ui-block-b"><a href="#" id="backButton" data-rel="back" data-role="button">Chat Rooms</a></div>
             </div>
+          </div>
         </div>
 
         <div class="content-secondary">
           <ul data-role="listview" id="userList" data-theme="c">
-        
+
           </ul>
         </div>
       </div><!-- /content -->
@@ -105,5 +111,5 @@
 
       </div>
     </div>
-  </body>
-</html>
+    </body>
+    </html>
