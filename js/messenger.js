@@ -304,7 +304,7 @@ $(document).ready(function () {
       currentView = new DeleteChatView(event, data);
     } else if (data.toPage[0] == pages.chat[0]) {
       currentView = new ChatView(event, data);
-      Aniways.init();
+      Aniways.init('PubNubDemo');
     }
   });
 });
