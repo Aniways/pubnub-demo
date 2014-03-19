@@ -110,11 +110,13 @@ p.intro strong {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 10;
 }
 
-.content-primary .ui-footer div .aniways-div {
+.content-primary div .aniways-div {
   margin: 5px auto;
-  width: 97%;
+  width: 100%;
+  resize: none;
 }
 
 .content-primary .ui-footer .ui-grid-a {
@@ -316,8 +318,7 @@ p.intro strong {
 }
 
 /* Navbar examples */
-.content-primary > .ui-header,
-.content-primary > .ui-footer {
+.content-primary > .ui-header{
   overflow: hidden;
 }
 
