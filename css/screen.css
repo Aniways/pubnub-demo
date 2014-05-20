@@ -352,6 +352,9 @@ dl dd ul li { border: none; }
   height: 100px;
   margin-left: -12px;
 }
+.aniways-highlight {
+  text-shadow: none;
+}
 
 #homePage_p {
   font-size: 30px;
