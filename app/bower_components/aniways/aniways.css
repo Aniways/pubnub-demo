@@ -479,6 +479,13 @@ hr {
   bottom: -10px;
 }
 
+*[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
+    content: attr(data-placeholder);
+    float: left;
+    margin-left: 2px;
+    color: #b3b3b3;
+}
+
 .aniways-div{
   -moz-appearance: textfield-multiline;
   -webkit-appearance: textarea;
@@ -499,8 +506,23 @@ hr {
   background-color: white;
 }
 .aniways-highlight {
-  background-color: lightgreen;
+  background: -webkit-linear-gradient(#ffffff, #666666 90%); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#ffffff, #666666 90%); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#ffffff, #666666 90%); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#ffffff, #666666 90%);
+  border-width:1px;
   cursor: pointer;
+  border-radius: 6px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip:    padding;
+  background-clip:         padding-box;
+  color: black;
+}
+
+.aniways-highlight.clicked {
+  color: white;
+  border-color: black;
+  background: black;
 }
 
 .aniways-image {
@@ -518,14 +540,25 @@ hr {
   height: 50px;
   width: auto;
   cursor: pointer;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
-.popover {
+.aniways-popover {
   border-radius: 20px;
-  background-color: lightgray;
+  background-color: rgba(0,0,0,0.4);
   max-width: none;
-  .aniways-popover-image {
-    padding-left: 12px;
-    padding-right: 12px;
+}
+
+@media screen and (max-device-width: 450px) {
+  .aniways-popover {
+    max-width:320px;
+    max-height: 70px;
+    overflow-x:scroll;
+    overflow-y: hidden;
+  }
+  .aniways-popover .popover-content {
+    max-height: 70px;
+    width: 0px;
   }
 }
